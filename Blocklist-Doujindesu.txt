@@ -1,6 +1,4 @@
-! 1DM+ custom filters for doujindesu.tv — safe, non-destructive version
-! Generated: 2025-09-18
-
+! 1DM+ custom filters for doujindesu.tv 
 ! -----------------------------
 ! Block known third-party ad hosts & scripts (network-level)
 ! -----------------------------
@@ -89,11 +87,3 @@ doujindesu.tv##script[src*="mirage2.min.js"]  /* cloudflare mirage is optional; 
 ||tracker.*^$third-party
 ||pixel.*^$third-party
 ||ads.*^$third-party
-
-! -----------------------------
-! Notes / testing helpers
-! - If an element is hidden but leaves a blank space, consider using a cosmetic rule that also sets height:0!important
-!   e.g. doujindesu.tv##.adv-wrapper:style(height:0!important;display:none!important)
-! - To debug which rule breaks something, temporarily disable the exception lines one-by-one.
-! - If new ad host appears, add domain with $third-party (safer) or iframe/cosmetic selector for doujindesu.tv.
-! -----------------------------
