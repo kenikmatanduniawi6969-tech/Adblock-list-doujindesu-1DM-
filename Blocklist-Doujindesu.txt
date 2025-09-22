@@ -5,6 +5,7 @@
 ||adv.clickadu.net^$third-party
 ||dukgikax.com^$third-party
 ||clickadu.net^$third-party
+||suwfacgazxm.com^$third-party
 ||clickadu.net^$script,third-party
 ||adv.clickadu.*^$third-party
 ||jiwtwaogh.com^$third-party
