@@ -22,6 +22,26 @@
 ||adsafeprotected.com^$third-party
 ||google-analytics.com^$third-party
 ||analytics.google.com^$third-party
+||adv.clickadu.net^
+||dukgikax.com^
+||wijphyfu.com^
+||clickadu.net^
+||suwfacgazxm.com^
+||clickadu.net^$script
+||adv.clickadu.*^
+||jiwtwaogh.com^
+||otvocpbissus.com^
+||wpiagwas.com^
+||wpiagwas.com/*
+||wpiagwas.*^
+||googlesyndication.com^
+||pagead2.googlesyndication.com^
+||annbtexugthi.com^
+||doubleclick.net^
+||adservice.google.*^
+||adsafeprotected.com^
+||google-analytics.com^
+||analytics.google.com^
 
 ! Common ad/tracker patterns (extra coverage)
 ||*/on.js$script
