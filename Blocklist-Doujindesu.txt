@@ -5,6 +5,7 @@
 ||adv.clickadu.net^$third-party
 ||dukgikax.com^$third-party
 ||wijphyfu.com^$third-party
+||cafdipjat.com^$third-party
 ||clickadu.net^$third-party
 ||suwfacgazxm.com^$third-party
 ||clickadu.net^$script,third-party
@@ -31,6 +32,7 @@
 ||adv.clickadu.*^
 ||jiwtwaogh.com^
 ||otvocpbissus.com^
+||cafdipjat.com^
 ||wpiagwas.com^
 ||wpiagwas.com/*
 ||wpiagwas.*^
