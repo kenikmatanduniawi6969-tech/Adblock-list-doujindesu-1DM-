@@ -3,6 +3,7 @@
 ! === Blokir jaringan iklan umum ===
 ||clickadu.*^$third-party
 ||adv.clickadu.*^$third-party
+||npojutficc.com^$third-party
 ||ardsultwirfe.com^$third-party
 ||cafdipjat.*^$third-party
 ||wpiagwas.*^$third-party
