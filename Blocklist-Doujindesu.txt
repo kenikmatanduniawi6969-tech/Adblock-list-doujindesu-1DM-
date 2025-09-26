@@ -5,6 +5,7 @@
 ||adv.clickadu.*^$third-party
 ||npojutficc.com^$third-party
 ||ardsultwirfe.com^$third-party
+||npojutficc.com^$third-party
 ||cafdipjat.*^$third-party
 ||wpiagwas.*^$third-party
 ||ovrjkuavda.com^$third-party
