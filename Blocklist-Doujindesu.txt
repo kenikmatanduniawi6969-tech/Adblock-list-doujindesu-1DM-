@@ -2,6 +2,7 @@
 
 ! === Blokir jaringan iklan umum ===
 ||clickadu.*^$third-party
+||atgmzemuf.com^$third-party
 ||adv.clickadu.*^$third-party
 ||npojutficc.com^$third-party
 ||ardsultwirfe.com^$third-party
