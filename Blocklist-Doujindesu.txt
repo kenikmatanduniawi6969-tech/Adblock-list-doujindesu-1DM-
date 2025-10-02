@@ -1,74 +1,96 @@
-! 1DM+ custom filters for doujindesu.tv 
+! =================================================
+! Custom Filters untuk doujindesu.tv
+! =================================================
 
 ! === Blokir jaringan iklan umum ===
 ||clickadu.*^$third-party
-||atgmzemuf.com^$third-party
 ||adv.clickadu.*^$third-party
+||atgmzemuf.com^$third-party
 ||npojutficc.com^$third-party
 ||ardsultwirfe.com^$third-party
 ||qmaaptxf.com^$third-party
-||npojutficc.com^$third-party
 ||cafdipjat.*^$third-party
 ||wpiagwas.*^$third-party
 ||ovrjkuavda.com^$third-party
 ||suwfacgazxm.*^$third-party
 ||dukgikax.*^$third-party
 ||wijphyfu.*^$third-party
-||azwxkuwu.com^$third-party
 ||azwxkuwu.*^$third-party
 ||otvocpbissus.*^$third-party
-
-! === Blokir popup & pesan spam ===
-||googlesyndication.com^$third-party
-||pagead2.googlesyndication.com^$third-party
-*$popup,third-party
-
-! -----------------------------
-! Block known third-party ad hosts & scripts (network-level)
-! -----------------------------
-||adv.clickadu.net^$third-party
-||dukgikax.com^$third-party
-||wijphyfu.com^$third-party
-||cafdipjat.com^$third-party
-||clickadu.net^$third-party
-||suwfacgazxm.com^$third-party
-||clickadu.net^$script,third-party
-||adv.clickadu.*^$third-party
 ||jiwtwaogh.com^$third-party
-||otvocpbissus.com^$third-party
-||wpiagwas.com^$third-party
-||wpiagwas.com/*$third-party
-||wpiagwas.*^$third-party
-||googlesyndication.com^$third-party
-||pagead2.googlesyndication.com^$third-party
 ||annbtexugthi.com^$third-party
 ||doubleclick.net^$third-party
 ||adservice.google.*^$third-party
 ||adsafeprotected.com^$third-party
 ||google-analytics.com^$third-party
 ||analytics.google.com^$third-party
-||adv.clickadu.net^
-||dukgikax.com^
-||wijphyfu.com^
-||clickadu.net^
-||suwfacgazxm.com^
-||clickadu.net^$script
-||adv.clickadu.*^
-||jiwtwaogh.com^
-||otvocpbissus.com^
-||cafdipjat.com^
-||wpiagwas.com^
-||wpiagwas.com/*
-||wpiagwas.*^
-||googlesyndication.com^
-||pagead2.googlesyndication.com^
-||annbtexugthi.com^
-||doubleclick.net^
-||adservice.google.*^
-||adsafeprotected.com^
-||google-analytics.com^
-||analytics.google.com^
 
+! === Blokir popup & pesan spam ===
+||googlesyndication.com^$third-party
+||pagead2.googlesyndication.com^$third-party
+*$popup,third-party
+
+! === Extra coverage / pola umum iklan & tracker ===
+||*/on.js$script
+||*/in.js$script
+||*/onfsibr$script
+||*/afgovtqu/*$script
+||*adserver*^$third-party
+||*ads-*^$third-party
+
+! =================================================
+! Cosmetic & iframe hiding (khusus doujindesu.tv)
+! =================================================
+doujindesu.tv##.adv
+doujindesu.tv##.ads
+doujindesu.tv##.adbanner
+doujindesu.tv##.ad-container
+doujindesu.tv##.advert
+doujindesu.tv##.adwrap
+doujindesu.tv##.popup-ad
+doujindesu.tv##.pushad
+doujindesu.tv##.adv-wrapper
+doujindesu.tv##.popup-ads
+doujindesu.tv##.popunder
+doujindesu.tv##.blox img[src*="blogger.googleusercontent.com"]
+doujindesu.tv##.blox a[href^="http"][target="_blank"] > img
+doujindesu.tv##iframe[src*="clickadu"]
+doujindesu.tv##iframe[src*="adv.clickadu"]
+doujindesu.tv##iframe[src*="wpiagwas"]
+doujindesu.tv##iframe[src*="ads-iframe"]
+doujindesu.tv##div[id^="ad"]
+doujindesu.tv##div[class*="ad-"]
+doujindesu.tv##div[class*="banner"]
+doujindesu.tv##.jp-button:upward(0)
+doujindesu.tv##.kr-button:upward(0)
+
+! === Script cleaner (hapus loader eksternal iklan) ===
+doujindesu.tv##script[src*="clickadu"]
+doujindesu.tv##script[src*="adv.clickadu"]
+doujindesu.tv##script[src*="wpiagwas"]
+doujindesu.tv##script[src*="/onfsibr"]
+doujindesu.tv##script[src*="/ovh/"]
+doujindesu.tv##script[src*="mirage2.min.js"]
+
+! =================================================
+! Exceptions (jangan diblokir, penting untuk fungsi situs)
+! =================================================
+@@||doujindesu.tv/themes/front/doujindesu/css/doujin.css$stylesheet,domain=doujindesu.tv
+@@||doujindesu.tv/themes/front/doujindesu/css/doujindesu.css$stylesheet,domain=doujindesu.tv
+@@||doujindesu.tv/themes/front/doujindesu/js/doudesu.js$script,domain=doujindesu.tv
+@@||doujindesu.tv/themes/front/doujindesu/js/jquery.min.js$script,domain=doujindesu.tv
+@@||cdn.doujindesu.dev^$image,domain=doujindesu.tv
+@@||doujindesu.tv/uploads/*$image,domain=doujindesu.tv
+@@||use.fontawesome.com^$stylesheet
+@@||ajax.googleapis.com^$script
+@@||ajax.cloudflare.com^$script
+
+! =================================================
+! Opsional: blokir tracker tambahan
+! =================================================
+||tracker.*^$third-party
+||pixel.*^$third-party
+||ads.*^$third-party
 ! Common ad/tracker patterns (extra coverage)
 ||*/on.js$script
 ||*/in.js$script
