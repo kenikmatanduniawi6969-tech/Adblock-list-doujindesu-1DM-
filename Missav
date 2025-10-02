@@ -1,0 +1,26 @@
+! ==== Blokir iklan & tracking umum ====
+||googletagmanager.com^$third-party
+||google-analytics.com^$third-party
+||sunnycloudstone.com^$third-party
+||bit.ly^$popup,third-party
+||doubleclick.net^$third-party
+||googlesyndication.com^$third-party
+||pagead2.googlesyndication.com^$third-party
+
+! ==== Blokir domain iklan/redirect lain yang muncul ====
+||fourhoi.com^$third-party
+||missav.ws/missav/logo-square.png$image,domain=missav.ws,redirect=noop.png
+||missav.ws/img/favicon.*$image,domain=missav.ws,redirect=noop.png
+
+! ==== Blokir popup & sponsored link ====
+||missav.ws/en/vip$popup
+||missav.ws/en/english-subtitle$popup
+||missav.ws/en/partners$popup
+||missav.ws/*/vip$popup
+||missav.ws/*/sponsored$popup
+
+! ==== Tetap izinkan elemen penting (whitelist) ====
+@@||missav.ws/build/assets/*.css$stylesheet
+@@||missav.ws/build/assets/*.js$script
+@@||missav.ws/fonts/*$font
+@@||missav.ws/api/*$xhr
