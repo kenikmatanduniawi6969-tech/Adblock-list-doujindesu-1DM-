@@ -17,13 +17,16 @@
 ||missav.ws/*/vip$popup
 ||missav.ws/*/sponsored$popup
 
-! ==== Sembunyikan elemen promosi ====
+! ==== Sembunyikan elemen promosi (lebih spesifik) ====
 missav.ws##a[href*="/vip"]
 missav.ws##a[href*="/partners"]
-missav.ws##[class*="sponsor"]
-missav.ws##[class*="promo"]
-missav.ws##[class*="advert"]
-missav.ws##[id*="ad"], [class*="ad-"], [class$="-ad"], [class*="ads"]
+missav.ws##.sponsor
+missav.ws##.sponsored
+missav.ws##.promo
+missav.ws##.advert
+missav.ws##.adsbox
+missav.ws##.ad-banner
+missav.ws##.popup-ad
 
 ! ==== Tetap izinkan elemen penting (whitelist) ====
 @@||missav.ws/build/assets/*.css$stylesheet
@@ -32,4 +35,3 @@ missav.ws##[id*="ad"], [class*="ad-"], [class$="-ad"], [class*="ads"]
 @@||missav.ws/api/*$xhr
 @@||missav.ws/missav/logo-square.png$image
 @@||missav.ws/img/favicon.*$image
-@@||missav.ws/*$image,domain=missav.ws,~third-party
