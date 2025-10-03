@@ -9,8 +9,6 @@
 
 ! ==== Blokir domain iklan/redirect lain yang muncul ====
 ||fourhoi.com^$third-party
-||missav.ws/missav/logo-square.png$image,domain=missav.ws,redirect=noop.png
-||missav.ws/img/favicon.*$image,domain=missav.ws,redirect=noop.png
 
 ! ==== Blokir popup & sponsored link ====
 ||missav.ws/en/vip$popup
@@ -19,8 +17,18 @@
 ||missav.ws/*/vip$popup
 ||missav.ws/*/sponsored$popup
 
+! ==== Sembunyikan elemen promosi (tanpa memblokir gambar penting) ====
+missav.ws##a[href*="/vip"]
+missav.ws##a[href*="/partners"]
+missav.ws##[class*="sponsor"]
+missav.ws##[class*="promo"]
+missav.ws##[class*="advert"]
+missav.ws##[id*="ad"], [class*="ad-"], [class$="-ad"], [class*="ads"]
+
 ! ==== Tetap izinkan elemen penting (whitelist) ====
 @@||missav.ws/build/assets/*.css$stylesheet
 @@||missav.ws/build/assets/*.js$script
 @@||missav.ws/fonts/*$font
 @@||missav.ws/api/*$xhr
+@@||missav.ws/missav/logo-square.png$image
+@@||missav.ws/img/favicon.*$image
