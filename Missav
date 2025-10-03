@@ -1,23 +1,24 @@
-! ==== Blokir iklan & tracking umum ====
+! ==== Izinkan semua resource dari domain utama ====
+@@||missav.ws^$stylesheet,script,font,image,xhr
+
+! ==== Blokir tracking/iklan eksternal ====
 ||googletagmanager.com^$third-party
 ||google-analytics.com^$third-party
 ||sunnycloudstone.com^$third-party
-||bit.ly^$popup,third-party
 ||doubleclick.net^$third-party
 ||googlesyndication.com^$third-party
 ||pagead2.googlesyndication.com^$third-party
-
-! ==== Blokir domain iklan/redirect lain ====
 ||fourhoi.com^$third-party
+||bit.ly^$popup,third-party
 
-! ==== Blokir popup & sponsored link ====
+! ==== Blokir popup/sponsored ====
 ||missav.ws/en/vip$popup
 ||missav.ws/en/english-subtitle$popup
 ||missav.ws/en/partners$popup
 ||missav.ws/*/vip$popup
 ||missav.ws/*/sponsored$popup
 
-! ==== Sembunyikan elemen promosi (lebih aman) ====
+! ==== Sembunyikan elemen promosi ====
 missav.ws##.sponsor
 missav.ws##.sponsored
 missav.ws##.promo
@@ -26,12 +27,4 @@ missav.ws##.adsbox
 missav.ws##.ad-banner
 missav.ws##.popup-ad
 missav.ws##a[href*="/vip"]
-missav.ws##a[href*="/partners"]
-
-! ==== Tetap izinkan elemen penting (whitelist) ====
-@@||missav.ws/build/assets/*.css$stylesheet
-@@||missav.ws/build/assets/*.js$script
-@@||missav.ws/fonts/*$font
-@@||missav.ws/api/*$xhr
-@@||missav.ws/missav/logo-square.png$image
-@@||missav.ws/img/favicon.*$image
+missav.ws##a[href*="/partners"]@@||missav.ws/img/favicon.*$image
