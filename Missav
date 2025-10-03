@@ -7,7 +7,7 @@
 ||googlesyndication.com^$third-party
 ||pagead2.googlesyndication.com^$third-party
 
-! ==== Blokir domain iklan/redirect lain yang muncul ====
+! ==== Blokir domain iklan/redirect lain ====
 ||fourhoi.com^$third-party
 
 ! ==== Blokir popup & sponsored link ====
@@ -17,9 +17,7 @@
 ||missav.ws/*/vip$popup
 ||missav.ws/*/sponsored$popup
 
-! ==== Sembunyikan elemen promosi (lebih spesifik) ====
-missav.ws##a[href*="/vip"]
-missav.ws##a[href*="/partners"]
+! ==== Sembunyikan elemen promosi (lebih aman) ====
 missav.ws##.sponsor
 missav.ws##.sponsored
 missav.ws##.promo
@@ -27,6 +25,8 @@ missav.ws##.advert
 missav.ws##.adsbox
 missav.ws##.ad-banner
 missav.ws##.popup-ad
+missav.ws##a[href*="/vip"]
+missav.ws##a[href*="/partners"]
 
 ! ==== Tetap izinkan elemen penting (whitelist) ====
 @@||missav.ws/build/assets/*.css$stylesheet
