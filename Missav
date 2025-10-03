@@ -17,7 +17,7 @@
 ||missav.ws/*/vip$popup
 ||missav.ws/*/sponsored$popup
 
-! ==== Sembunyikan elemen promosi (tanpa memblokir gambar penting) ====
+! ==== Sembunyikan elemen promosi ====
 missav.ws##a[href*="/vip"]
 missav.ws##a[href*="/partners"]
 missav.ws##[class*="sponsor"]
@@ -32,3 +32,4 @@ missav.ws##[id*="ad"], [class*="ad-"], [class$="-ad"], [class*="ads"]
 @@||missav.ws/api/*$xhr
 @@||missav.ws/missav/logo-square.png$image
 @@||missav.ws/img/favicon.*$image
+@@||missav.ws/*$image,domain=missav.ws,~third-party
