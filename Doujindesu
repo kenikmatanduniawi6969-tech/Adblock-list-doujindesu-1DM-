@@ -1,40 +1,57 @@
-! =================================================
-! Custom Filters untuk doujindesu.tv
-! =================================================
-
-! === Blokir jaringan iklan umum ===
-||clickadu.*^$third-party
-||adv.clickadu.*^$third-party
-||atgmzemuf.com^$third-party
-||avsahvhupacv.com^$third-party
-||npojutficc.com^$third-party
-||ardsultwirfe.com^$third-party
-||qmaaptxf.com^$third-party
-||cafdipjat.*^$third-party
-||wpiagwas.*^$third-party
-||ovrjkuavda.com^$third-party
-||suwfacgazxm.*^$third-party
-||dukgikax.*^$third-party
-||wijphyfu.*^$third-party
-||azwxkuwu.*^$third-party
-||dagqufla.com^$third-party
-||otvocpbissus.*^$third-party
-||ornahjafr.com^$third-party
-||jiwtwaogh.com^$third-party
-||ornahjafr.com^$third-party
-||annbtexugthi.com^$third-party
-||doubleclick.net^$third-party
-||adservice.google.*^$third-party
-||wwaqijow.com^$third-party
-||adsafeprotected.com^$third-party
-||google-analytics.com^$third-party
-||analytics.google.com^$third-party
-
-! === Blokir popup & pesan spam ===
-||googlesyndication.com^$third-party
-||pagead2.googlesyndication.com^$third-party
-*$popup,third-party
-
+@@||disqus.com^
+@@||disquscdn.com^
+@@||c.disquscdn.com^
+doujindesu.tv#@#iframe#iframe-comment
+@@||doujindesu.tv/themes/front/doujindesu/css/*$stylesheet,domain=doujindesu.tv
+@@||doujindesu.tv/themes/front/doujindesu/js/jquery.min.js$script,domain=doujindesu.tv
+@@||doujindesu.tv/uploads/logo-doujindesuXXX.png$image,domain=doujindesu.tv
+@@||cdn.doujindesu.dev/uploads/*$image,domain=doujindesu.tv
+@@||doujindesu.tv^$image,domain=doujindesu.tv
+||klik.best^
+||klik.gg^
+||cek.to^
+||t.ly^
+||menujupenta.site^
+||gacor.vin^
+||misqimohlpk.com^
+||dw.zeus.fun^
+||campaign.datamakauidrkd.com^
+||adv.clickadu.net^
+||pumaqmqix.com^
+doujindesu.tv##iframe[src*="clickadu"]
+doujindesu.tv##script[src*="clickadu"]
+doujindesu.tv##+js(nano-removeElements, script[src*="clickadu"])
+doujindesu.tv##+js(nano-removeElements, iframe[src*="clickadu"])
+doujindesu.tv##script:has-text(clickadu)
+doujindesu.tv##script[src*="pumaqmqix.com"]
+doujindesu.tv##script:has-text(amlgiv)
+doujindesu.tv##script:has-text(adtojlbh)
+doujindesu.tv##+js(nano-removeElements, script[src*="pumaqmqix.com"])
+doujindesu.tv##.kln
+doujindesu.tv##.blox
+doujindesu.tv##.blox + center
+doujindesu.tv##.announcement + center
+doujindesu.tv##.adv-wrapper
+doujindesu.tv##center:has(.blox)
+doujindesu.tv##div[style*="height:90px"]
+doujindesu.tv##div[style*="height:100px"]
+doujindesu.tv##a[href*="klik.best"]
+doujindesu.tv##a[href*="klik.gg"]
+doujindesu.tv##a[href*="gacor.vin"]
+doujindesu.tv##a[href*="dw.zeus.fun"]
+doujindesu.tv##a[href*="menujupenta.site"]
+doujindesu.tv##a[href*="campaign.datamakauidrkd.com"]
+doujindesu.tv##a[href*="cek.to"]
+doujindesu.tv##a[title*="DEWA"]
+doujindesu.tv##a[title*="KOKO"]
+doujindesu.tv##a[title*="SBOBET"]
+doujindesu.tv##a[title*="JPDEWA"]
+doujindesu.tv##a[title*="SLOT"]
+doujindesu.tv##a[title*="BANDAR"]
+doujindesu.tv##a[title*="KAKEKJP"]
+doujindesu.tv##body:style(overflow-y:auto !important;)
+doujindesu.tv##.see-all:style(margin-bottom:5px !important;)
+doujindesu.tv##.mlb:style(display:none !important;)
 ! === Extra coverage / pola umum iklan & tracker ===
 ||*/on.js$script
 ||*/in.js$script
